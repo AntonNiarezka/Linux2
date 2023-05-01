@@ -1,0 +1,31 @@
+Use 'vflogin username' to connect to your account.
+You can create a new account at https://vfsync.org/signup .
+Use 'export_file filename' to export a file to your computer.
+Imported files are written to the home directory.
+ 
+
+localhost:~# mkdir -p /home/user/start
+localhost:~# touch /home/user/start/1.txt
+localhost:~# echo "Start" > 1.txt
+localhost:~# date >> 1.txt
+localhost:~# mkdir -p /opt/task
+localhost:~# touch /opt/task/start.txt
+localhost:~# touch /opt/task/start.txt && cp /home/user/start/1.txt /opt/task/start.txt
+localhost:~# tree /opt/
+/opt/
+├── task
+│   └── start.txt
+└── temu
+    ├── kernel-x86.bin
+    ├── readme.txt
+    ├── root-x86-framebuffer.cfg
+    ├── root-x86.bin
+    └── root-x86.cfg
+ 
+2 directories, 6 files
+localhost:~# ls -a / | tail -4
+sys
+tmp
+usr
+var
+localhost:~# 
